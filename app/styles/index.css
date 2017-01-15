@@ -1,0 +1,123 @@
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+/*nav*/
+.nav-wrapper {
+  padding-top: 15px;
+  background-color: #171717;
+}
+.nav-wrapper .brand-logo {
+  color:  #FDFEFD;
+  font-family: '', serif;
+  font-size: 35px;
+}
+
+.nav-wrapper .ul {
+  color: #FDFEFD;
+}
+
+nav {
+  height: 100px;
+}
+nav ul a {
+    transition: background-color .4s;
+    font-size: 1.25rem;
+    color: #fff;
+    display: block;
+    padding: 0 15px;
+    cursor: pointer;
+}
+nav ul a:hover {
+  background-color: darkgray;
+}
+
+.outer {
+    border-bottom: 3px solid #fa2600;
+}
+
+.inner {
+    border-bottom: 2px solid #FDFEFD;
+}
+
+  /*footer*/
+
+.page-footers {
+  background-color: #171717;
+}
+
+
+form {
+  margin-top: 5px;
+}
+
+main p + ul {
+  font-family: 'Lato', sans-serif;
+  color: #FDFEFD;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+img .responsive-img {
+  height: 80%;
+  width: 80%;
+}
+
+#cameras {
+  padding-top: 50px;
+  margin-top: 50px;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+.full-width {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  background-image: url("http://www.walldevil.com/wallpapers/a31/high-resolution-sousyar-mamesoku.jpg");
+  background-repeat: no-repeat;
+  height: 50vh;
+  background-size: cover;
+  -webkit-filter: grayscale(50%);
+  filter: brightness(.9);
+}
+#full-img {
+  width: 100%;
+  height: 400px;
+}
+
+#no-pad {
+  margin-top: 0;
+}
+#glass {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background-color: rgba(255,255,255, 0.07)
+}
+
+.hidden {
+  display: none;
+}
+
+.card:hover + .shown {
+  display: block;
+}
+
+.card-image {
+  max-height: 200px;
+}
+
+.sale {
+  padding-bottom: 2px;
+}

@@ -1,0 +1,51 @@
+<div class="container">
+  <div class="row">
+    <h1>Your Cart</h1>
+    <!-- <h6 ng-hide="cartCtrl.cartCount() >= 1"><small>Is empty...</small></h6> -->
+    <table>
+      <!-- ng-show="cartCtrl.cartCount() < 0 -->
+      <thead>
+        <tr class="center-align">
+            <!-- <th></th> -->
+            <th>Item</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Total</th>
+        </tr>
+      </thead>
+      <!-- ng-repeat="item in cartCtrl.cart() -->
+      <tbody>
+        <tr ng-repeat="item in cartCtrl.cart()">
+          <!-- <td><img ng-src="{{ item.image }}" height="100px" width="100px"></td> -->
+          <td>{{ item.name }}</td>
+          <td>{{ item.price | currency }}</td>
+          <td>{{ item.quantity }}</td>
+          <td>{{ item.price * item.quantity + ((item.price * item.quantity) * .1)| currency}}</td>
+        </tr>
+        <tr>
+           <td><strong>Subtotal:</strong></td>
+           <td></td>
+           <td class="center-align">{{ cartCtrl.subtotal() | currency }}</td>
+         </tr>
+         <tr>
+           <td><strong>Tax:</strong></td>
+           <td></td>
+           <td class="center-align">{{ cartCtrl.subtotal() * .10 | currency }}</td>
+         </tr>
+         <tr>
+           <td><strong>Total:</strong></td>
+           <td></td>
+           <td class="center-align"><strong>{{ cartCtrl.subtotal() + (cartCtrl.subtotal() * .10) | currency }}</td>
+         </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="row">
+    <div  class="col s12 l4 m5 left">
+      <a ui-sref="checkout"  class="waves-effect btn-large">Purchase Items</a>
+    </div>
+    <div class="col s12 l4 m5 right">
+        <a ui-sref="home"  class="waves-effect btn-large">Continue Shopping</a>
+    </div>
+  </div>
+</div>

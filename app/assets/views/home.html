@@ -1,0 +1,62 @@
+<div id="no-pad" class="full-width valign-wrapper card-panel hoverable">
+  <div id="glass" class="caption center-align card z-depth-6">
+      <h2 class="center">We've Got Your Camera</h2>
+      <h5 class="light grey-text text-lighten-3">For When You really want to buy a  Camera.</h5>
+  </div>
+</div>
+
+<div class="row">
+  <div class="row">
+    <form>
+      <div input-field>
+        <div class="col s12 m5 l5 offset-l1 offset-m1 ">
+          <input type="text" ng-model="catalogCtrl.searchText">
+          <!-- <input type="text" ng-model="<searchT></searchT>ext"> -->
+            <label>Search By Name</label>
+        </div>
+        </div>
+        <div input-field>
+          <div class="col s12 m5 l5">
+            <select material-select ng-model="catalogCtrl.sortOrder">
+              <option disabled selected>Sort By...</option>
+              <option ng-repeat="value in [ { label:'Name', value: 'title' }, { label: 'Price', value: 'price' }, { label: 'Rating', value: 'rating' }, { label: 'On Sale', value: 'onSale' } ]" value="{{value.value}}">{{value.label}}</option>
+            </select>
+          </div>
+        </div>
+      </form>
+  </div>
+  <div>
+    <div class="col s12 m6 l4" ng-repeat="camera in catalogCtrl.cameras | filter : catalogCtrl.searchText | orderBy: catalogCtrl.sortOrder : reverse = true" >
+      <div class="card hoverable">
+        <div class="card-image waves-effect waves-block waves-light" ng-src="">
+          <img class="activator" ng-src="{{ camera.image }}" height="200px" width="50px">
+        </div>
+        <div class="card-content">
+        <div class="divider">
+        </div>
+          <span class="card-title activator grey-text text-darken-4 truncate">
+            {{ camera.name }}
+          </span>
+        </div>
+        <div class="card-reveal">
+          <!-- Breaks everything -->
+        <div class="card-reveal">
+        <h5><span class="card-title grey-text text-darken-4">
+        <i class="material-icons right">close</i></span></h5>
+        <h5>{{ camera.name }}</h5>
+        <p>{{ camera.price | currency }}</p>
+        <p>Rating: {{ camera.rating }}/4</p>
+        <p class="sale">
+          <i ng-show="{{camera.onSale}}" class="material-icons">local_offer</i><p ng-show="{{camera.onSale}}">Sale! 10%</p>
+        </p>
+        <div class="divider"></div>
+        <div class="row">
+          <div class="col s12 m12 l12" ng-controller="CartCtrl as cartCtrl">
+            <p><a href="" ng-click="cartCtrl.addToCart(camera.name, camera.price, camera.id, camera.image)" class="waves-effect waves-light btn-large">Add To Cart</a></p>
+          </div>
+        </div>
+       </div>
+      </div>
+    </div>
+  </div>
+</div>

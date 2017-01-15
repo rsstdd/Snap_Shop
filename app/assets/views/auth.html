@@ -1,0 +1,52 @@
+<!-- Auth ng-controller="" AuthCtrl as AuthCtrl-->
+<div class="row" ng-controller="AuthCtrl as authCtrl">
+  <div class="valign-wrapper">
+    <div class="col m12 l12 s12 ">
+      <!-- ng-bind="::authCtrl.title" -->
+    <h1 class="valign center">Title</h1>
+    <p class="valign center">
+      <a ui-sref="app.login"
+      ng-show="authCtrl.authType === 'register'">
+        <!-- -->
+        Have an account?
+      </a>
+      <a ui-sref="app.register"
+      ng-show="authCtrl.authType === 'login'">
+        <!-- ng-show="authCtrl.authType === 'login'" -->
+        Need an account?
+      </a>
+    </p>
+
+    <form class="row" ng-submit="authCtrl.submitForm()">
+      <div input-field class="col s12 m8 l8 offset-l2">
+        <input type="text"
+        placeholder="Name"
+        validate
+        ng-model="authCtrl.name" />
+      </div>
+
+      <div input-field class="col s12 m8 l8 offset-l2">
+        <input type="email"
+        name="email"
+        validate
+        placeholder="Email"
+        ng-model="authCtrl.email" />
+      </div>
+
+      <div input-field class="col s12 m8 l8 offset-l2">
+        <input id="password" type="password"
+        name="password"
+        validate
+        ng-model="authCtrl.password" />
+        <label for password>Password</label>
+      </div>
+    </form>
+    <button class="btn btn-lg btn-primary right"
+      type="submit"
+      ng-bind="::authCtrl.title">
+    </button>
+
+  </div>
+</div>
+</div>
+<!-- end auth -->
