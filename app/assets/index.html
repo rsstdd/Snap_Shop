@@ -1,17 +1,43 @@
 <!DOCTYPE html>
-<html ng-app="my-app">
+<html ng-app="snapShopApp">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hello world</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>SnapShop</title>
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+
     <link rel="stylesheet" href="/vendor.css">
     <link rel="stylesheet" href="/app.css">
+
+    <link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:400,700'>
+    <link href="https://fonts.googleapis.com/css?family=Trirong:400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
   </head>
-  <body>
-    <h1>Hello World</h1>
+
+  <body ng-cloak>
+
+    <header ng-include="'./views/nav.html'"></header>
+    <main class="container">
+      <div ui-view>
+
+      </div ui-view>
+    </main>
+
+    <footer ng-include="'./views/footer.html'"></footer>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-materialize/0.2.1/angular-materialize.min.js"></script>
 
     <script src="/vendor.js"></script>
     <script src="/app.js"></script>
     <script>require('app');</script>
+
   </body>
 </html>

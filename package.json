@@ -9,15 +9,30 @@
     "url": ""
   },
   "scripts": {
+    "heroku-postbuild": "brunch build --production; knex migrate:latest",
+    "knex": "knex",
     "lint": "eslint --ext .js --ignore-pattern public",
-    "start": "brunch watch --server"
+    "start": "brunch watch --server",
+    "nf": "nf start"
   },
   "dependencies": {
-    "angular": "^1.5.8",
+    "angular": "^1.6.1",
+    "angular-materialize": "^0.2.2",
+    "angular-ui-router": "^0.3.2",
+    "bcrypt-as-promised": "^1.1.0",
+    "body-parser": "^1.15.2",
+    "boom": "^4.2.0",
     "brunch": "^2.9.1",
+    "cookie-parser": "^1.4.3",
+    "dotenv": "^4.0.0",
     "express": "^4.14.0",
+    "humps": "^2.0.0",
+    "jquery": "^3.1.1",
+    "jsonwebtoken": "^7.2.1",
+    "knex": "^0.12.6",
     "morgan": "^1.7.0",
-    "normalize.css": "^4.2.0"
+    "normalize.css": "^4.2.0",
+    "pg": "^6.1.2"
   },
   "devDependencies": {
     "auto-reload-brunch": "^2.7.1",
