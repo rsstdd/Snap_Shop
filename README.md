@@ -1,6 +1,6 @@
 # Angular.js SnapShop
 
-Snapshop is a fictitious E-commerce website for a camera retail store. I built this project with Node Express, postgreSQL, Angular, and Angular-Materialize.
+Snapshop is a fictitious e-commerce website for a camera retail store. I built this project with Node Express, postgreSQL, Angular, and Angular-Materialize.
 
 ---
 
