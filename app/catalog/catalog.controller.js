@@ -1,4 +1,4 @@
-export default  class CatalogCtrl {
+export default class CatalogCtrl {
   constructor(catalogSvc) {
     this.searchText = '';
     this.catalogSvc = catalogSvc;
@@ -10,7 +10,6 @@ export default  class CatalogCtrl {
   }
 
   getCameras() {
-    console.log(cameras);
 
     return this.catalogSvc.cameras;
   }

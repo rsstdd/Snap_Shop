@@ -6,7 +6,7 @@ export default class CatalogService {
   getCameras() {
     return this.$http.get('/api/cameras')
       .then((cameras) => {
-        console.log(cameras.data);
+
         return cameras.data;
       })
       .catch((err) => {
